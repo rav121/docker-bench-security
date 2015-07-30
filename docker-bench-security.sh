@@ -27,6 +27,7 @@ for p in $req_progs; do
   command -v "$p" >/dev/null 2>&1 || { printf "%s command not found.\n" "$p"; exit 1; }
 done
 
+# change hash
 # Ensure we can connect to docker daemon
 docker ps -q >/dev/null 2>&1
 if [ $? -ne 0 ]; then
